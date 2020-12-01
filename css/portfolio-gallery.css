@@ -63,7 +63,19 @@
   color: #FFF;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1024px) {
+  
+  .container:hover .element {
+    animation: delay-pointer-events 2000ms linear;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms;
+    transition-delay: 250ms;
+    z-index: 10000;
+  }
+  
+  
   .gallery-hover {
     padding: 10px;
   }
@@ -71,16 +83,29 @@
   .work-title {
     font-size: 1.3rem;
   }
-
+  
   .gallery-button {
-    visibility: hidden;
-    transition: visibility 1s linear;
+    opacity: 0;
+    transition: opacity 1s linear;
     font-size: 1.125rem;
   }
+  @keyframes delay-pointer-events {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+  }
   .gallery-hover:hover > .gallery-button {
+    animation: delay-pointer-events 1s linear;
+    opacity: 1;
     visibility: visible;
   }
-
+  
   .design-credits {
     font-size: 1rem;
   }
