@@ -1,0 +1,16 @@
+.button {
+  border: none;
+  box-shadow: 5px 5px 15x 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 20px;
+  transition: transform 0.2s ease-out;
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  transform: scale(1.02);
+}

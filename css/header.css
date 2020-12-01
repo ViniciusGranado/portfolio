@@ -4,20 +4,26 @@
   padding: 0 30px;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
+
 .header ul {
   display: flex;
   justify-content: flex-end;
 }
+
 .header li {
   font-size: 1.5rem;
 }
+
 .header li + li {
   margin-left: 30px;
 }
+
 .header a {
   padding: 30px 10px;
 }
+
 .header li.selected > a {
   background-color: #222;
   color: #F8F32B;
@@ -32,36 +38,44 @@
 /* HEADER MOBILE */
 @media only screen and (max-width: 600px) {
   .header {
-    padding: 0;
     height: 80px;
+    padding: 0;
+    position: relative;
   }
 
   .hamburguer-btn {
-    display: block;
     background-image: url('../images/menu.svg');
+    background-position: calc(100% - 15px) center;
     background-repeat: no-repeat;
     background-size: 50px;
-    background-position: calc(100% - 10px) center;
-    text-indent: -999px;
-    padding: 30px 10px;
-    z-index: 2;
-    position: relative;
+    display: block;
     height: 80px;
+    margin-left: auto;
+    position: relative;
+    text-indent: -999px;
+    width: 80px;
+    z-index: 2; /* To get above mobile menu */
   }
 
   .header-nav {
-    transition: transform 0.4s ease-out;
     background-color: #F8F32B;
+    position: absolute;
+    top: 0;
+    transition: transform 0.25s ease-out;
+    width: 100%;
   }
   .header-nav.hidden {
+    transform: translateY(-100%);
     z-index: 1;
-    transform: translateY(-200%);
   }
 
   .header-nav ul {
     flex-direction: column;
   }
   
+  .header li {
+    height: 80px;
+  }
   .header li + li {
     margin: 0;
   }
