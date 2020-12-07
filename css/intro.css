@@ -64,6 +64,9 @@
   padding: 5px;
   transition: color 0.3s ease-out;
 }
+.language-selector a.active {
+  color: #F8F32B;
+}
 .language-selector a:hover {
   color: #F8F32B;
 }
