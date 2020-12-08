@@ -47,6 +47,9 @@
     font-size: 1.125rem;
   }
 
+  .contact-list {
+    padding-bottom: 0;
+  }
   .contact-list li{
     font-size: 1rem;
   }

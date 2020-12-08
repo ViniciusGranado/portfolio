@@ -5,7 +5,7 @@ const observerRootMargin = window.innerHeight / 2;
 const options = {
   root: null,
   threshold: 0,
-  rootMargin: `-${observerRootMargin}px`
+  rootMargin: '-100px'
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
