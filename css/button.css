@@ -1,14 +1,14 @@
 .button {
   border: none;
-  box-shadow: 5px 5px 15x 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  font-size: 1.5rem;
-  padding: 20px;
-  transition: transform 0.2s ease-out;
-  outline: none;
-  font-family: inherit;
+  box-shadow: 5px 5px 15x 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  font-family: inherit;
+  font-size: 1.5rem;
+  outline: none;
+  padding: 20px;
   text-align: center;
+  transition: transform 0.2s ease-out;
 }
 
 .button:hover {
