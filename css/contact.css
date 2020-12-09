@@ -42,7 +42,7 @@
   background-image: url('../images/email.svg');
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   .contact-info > p {
     font-size: 1.125rem;
   }
