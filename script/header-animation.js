@@ -1,11 +1,21 @@
 const sections = document.querySelectorAll('.section');
 
-const observerRootMargin = window.innerHeight / 2;
+function animateHeader (elementId) {
+  const menuItens = document.querySelectorAll('.menu-link');
+
+  menuItens.forEach((item) => {
+    if (item.getAttribute('data-link') === elementId) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  })
+}
 
 const options = {
   root: null,
   threshold: 0,
-  rootMargin: '-100px'
+  rootMargin: '-300px 0px'
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -18,16 +28,4 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 sections.forEach(section => {
   observer.observe(section);
-})
-
-function animateHeader (elementId) {
-  const menuItens = document.querySelectorAll('.menu-link');
-
-  menuItens.forEach((item) => {
-    if (item.getAttribute('data-link') === elementId) {
-      item.classList.add('active');
-    } else {
-      item.classList.remove('active');
-    }
-  })
-}
+});
